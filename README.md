@@ -49,7 +49,11 @@ H2-DB Consoles (Note: This will be accessible only when you run the projects)
 
 ``` http://localhost:9090/h2-console/login.jsp ```
 
-## Following are the operation which covered by this project. 
+## Project Delivery
+
+After doing **maven build**, it generates the **war** file. This artifacts can be delivered and deployed in any servlet container. You can use any **web server** or **application server** which has **servlet container**. The same thing you can take it to **docker** as well.
+
+## Following are the use cases. 
 
 **1. As a user, I need an API to create a friend connection between two email addresses.**
 
