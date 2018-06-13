@@ -1,6 +1,55 @@
 # Friends Management Project
 
-This is the sample java based REST project using spring-boot framework. 
+This is simple java based REST project using spring-boot framework. 
+The postman rest client module is already committed in this project which you can simply import in postman client and play.
+The overall test code coverage report is also attached in this project. Download and extract it and have a look.
+
+**Required Tech-spec :**
+1. Java (v1.8 or later)
+2. Spring-boot (v1.5.2.RELEASE)
+3. H2 DB - In memory DB (v1.4.193)
+4. JUnit - (v4.12)
+5. Maven - (v4.0.0)
+6. Mockito - (v1.10.19)
+7. POSTMAN Rest Client
+
+**Additional Attachements:**
+- Postman rest client project
+- Code coverage report
+
+**DB Tables:**
+
+- friends (id, email)
+  - PK : id
+- connections (id, p_id, f_id, block)
+  - PK : id, FK: p_id, f_id
+- subscriptions (id, p_id, f_id, subscribed)
+  - PK : id, FK: p_id, f_id
+- messages (id, p_id, text)
+  - PK : id, FK: p_id
+
+## Build and Run
+
+Command to build this project
+
+``` mvn clean install ```
+
+Command to run this project
+
+``` mvn spring-boot:run ```
+
+Note: The application will run on default port **9090**. You can override this port by specifying port as part of startup jvm 
+parameter.
+
+``` mvn spring-boot:run --server.port=8080```
+
+Monitor console logs and play with this projects.
+
+H2-DB Consoles (Note: This will be accessible only when you run the projects)
+
+``` http://localhost:9090/h2-console/login.jsp ```
+
+## Following are the operation which covered by this project. 
 
 **1. As a user, I need an API to create a friend connection between two email addresses.**
 
