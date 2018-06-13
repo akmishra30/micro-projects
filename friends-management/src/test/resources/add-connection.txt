@@ -1,0 +1,7 @@
+{
+  "friends":
+    [
+      "abc@gmail.com",
+      "xyz@gmail.com"
+    ]
+}

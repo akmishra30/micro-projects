@@ -1,0 +1,36 @@
+DROP TABLE IF EXISTS friends;
+DROP TABLE IF EXISTS connections;
+DROP TABLE IF EXISTS messages;
+
+CREATE TABLE IF NOT EXISTS friends (
+  id         BIGINT IDENTITY PRIMARY KEY,
+  email      VARCHAR(50) UNIQUE NOT NULL,
+);
+
+CREATE TABLE IF NOT EXISTS connections (
+  id		BIGINT IDENTITY PRIMARY KEY,
+  p_id BIGINT NOT NULL,
+  f_id  BIGINT NOT NULL,
+  block      BOOLEAN NOT NULL,
+  FOREIGN KEY (p_id) REFERENCES friends (id),
+  FOREIGN KEY (f_id) REFERENCES friends (id),
+);
+
+CREATE TABLE IF NOT EXISTS subscriptions (
+  id		BIGINT IDENTITY PRIMARY KEY,
+  p_id BIGINT NOT NULL,
+  f_id  BIGINT NOT NULL,
+  subscribed	BOOLEAN NOT NULL,
+  FOREIGN KEY (p_id) REFERENCES friends (id),
+  FOREIGN KEY (f_id) REFERENCES friends (id),
+);
+
+CREATE TABLE IF NOT EXISTS messages (
+  id		BIGINT IDENTITY PRIMARY KEY,
+  p_id BIGINT NOT NULL,
+  text VARCHAR(500) NOT NULL,
+  FOREIGN KEY (p_id) REFERENCES friends (id),
+);
+
+
+

@@ -1,0 +1,4 @@
+{
+  "sender":  "abc@gmail.com",
+  "text": "Hello World! kate@example.com"
+}

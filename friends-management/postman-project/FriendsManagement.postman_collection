@@ -1,0 +1,197 @@
+{
+	"id": "bdd7e302-9b33-6215-d092-47a6dd2657f5",
+	"name": "FriendsManagement",
+	"description": "",
+	"order": [
+		"b0f974d0-aa54-10e7-633a-6bb1ba570c48",
+		"f18c2b55-a6d1-e0be-8c21-ca315bd662a7",
+		"63fe9d05-56ed-ba3a-d649-5bc738a3edc1",
+		"243127a1-62d1-23f1-7709-68818848681f",
+		"30bae596-8d04-0f7e-e4f2-46b5c4e33d8a",
+		"ed043154-3f67-af89-4980-e9677a5317c3"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1528617642499,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "243127a1-62d1-23f1-7709-68818848681f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9090/api/friends/retrieve/list",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528773698322,
+			"name": "RetrieveList",
+			"description": "",
+			"collectionId": "bdd7e302-9b33-6215-d092-47a6dd2657f5",
+			"responses": [],
+			"rawModeData": "{\n  \"email\": \"abc@gmail.com\"\n}"
+		},
+		{
+			"id": "30bae596-8d04-0f7e-e4f2-46b5c4e33d8a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9090/api/friends/retrieve/common",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528801046012,
+			"name": "RetrieveCommon",
+			"description": "",
+			"collectionId": "bdd7e302-9b33-6215-d092-47a6dd2657f5",
+			"responses": [],
+			"rawModeData": "{\n  \"friends\":\n    [\n      \"abc@gmail.com\",\n      \"pqr@gmail.com\"\n    ]\n}"
+		},
+		{
+			"id": "63fe9d05-56ed-ba3a-d649-5bc738a3edc1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9090/api/friends/send/updates",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528773692208,
+			"name": "SendUpdates",
+			"description": "",
+			"collectionId": "bdd7e302-9b33-6215-d092-47a6dd2657f5",
+			"responses": [],
+			"rawModeData": "{\n  \"sender\":  \"abc@gmail.com\",\n  \"text\": \"Hello World! kate@example.com\"\n}"
+		},
+		{
+			"id": "b0f974d0-aa54-10e7-633a-6bb1ba570c48",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9090/api/friends/subscribe/updates",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528801055861,
+			"name": "SubscribeUpdates",
+			"description": "",
+			"collectionId": "bdd7e302-9b33-6215-d092-47a6dd2657f5",
+			"responses": [],
+			"rawModeData": "{\n  \"requestor\": \"abc@gmail.com\",\n  \"target\": \"xyz@gmail.com\"\n}"
+		},
+		{
+			"id": "ed043154-3f67-af89-4980-e9677a5317c3",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9090/api/friends/add/connection",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528801048013,
+			"name": "AddConnection",
+			"description": "",
+			"collectionId": "bdd7e302-9b33-6215-d092-47a6dd2657f5",
+			"responses": [],
+			"rawModeData": "{\n  \"friends\":\n    [\n      \"abc@gmail.com\",\n      \"xyz@gmail.com\"\n    ]\n}"
+		},
+		{
+			"id": "f18c2b55-a6d1-e0be-8c21-ca315bd662a7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9090/api/friends/block/updates",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1528801051183,
+			"name": "BlockUpdates",
+			"description": "",
+			"collectionId": "bdd7e302-9b33-6215-d092-47a6dd2657f5",
+			"responses": [],
+			"rawModeData": "{\n \"requestor\": \"abc@gmail.com\",\n  \"target\": \"xyz@gmail.com\"\n}"
+		}
+	]
+}
